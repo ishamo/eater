@@ -16,7 +16,7 @@
       <tr>
         <td><%= person.name %></td>
         <td><%= person.description %></td>
-        <td><%=l person.created_at %></td>
+        <td><%= person.updated_at.localtime.to_formatted_s(:db)  %></td>
         <td>
           <%= link_to t('.show', :default => t("helpers.links.show")),
                       person_path(person), :class => 'btn btn-default btn-xs' %>
