@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>定餐人员</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>姓名</th>
+      <th>需求</th>
+      <th>定餐时间</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @people.each do |person| %>
+      <tr>
+        <td><%= person.name %></td>
+        <td><%= person.description %></td>
+        <td><%= person.created_at%></td>
+        <td><%= link_to '详细', person %></td>
+        <td><%= link_to '编辑', edit_person_path(person) %></td>
+        <td><%= link_to '删除', person, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Person', new_person_path %>
+
+<p style="color: red; font-size:20px"> 用餐人数共有 <%= @count %> 人。</p>
