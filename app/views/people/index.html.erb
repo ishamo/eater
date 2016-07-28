@@ -5,7 +5,6 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
       <th><%= model_class.human_attribute_name(:name) %></th>
       <th><%= model_class.human_attribute_name(:description) %></th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
@@ -15,7 +14,6 @@
   <tbody>
     <% @people.each do |person| %>
       <tr>
-        <td><%= link_to person.id, person_path(person) %></td>
         <td><%= person.name %></td>
         <td><%= person.description %></td>
         <td><%=l person.created_at %></td>
@@ -38,3 +36,6 @@
 <%= link_to t('.new', :default => t("helpers.links.new")),
             new_person_path,
             :class => 'btn btn-primary' %>
+
+
+<p style="color: red; font-size: 20px"> 点餐人数共<%= @count %>人。</p>
