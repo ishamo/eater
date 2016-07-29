@@ -2,6 +2,9 @@
 <div class="page-header">
   <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
 </div>
+
+<p>当前时间：<%= Time.now.to_formatted_s(:db) %></p>
+
 <table class="table table-striped">
   <thead>
     <tr>
@@ -16,7 +19,7 @@
       <tr>
         <td><%= person.name %></td>
         <td><%= person.description %></td>
-        <td><%= person.updated_at.localtime.to_formatted_s(:db)  %></td>
+        <td><%= person.updated_at.localtime.to_formatted_s(:time)  %></td>
         <td>
           <%= link_to t('.show', :default => t("helpers.links.show")),
                       person_path(person), :class => 'btn btn-default btn-xs' %>
