@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>EMCS食客</title>
+    <title>食客 - 点餐人数统计</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,10 +9,14 @@
   </head>
 
   <body>
-
+  <%= nav_bar :responsive => true, :fixed => :top, :brand => "Eisoo定餐" do %>
+	<%= menu_text "We make shiny things" %>
+  <% end %>
+  
 
   <div class="container">
     <%= yield %>
   </div>
+
   </body>
 </html>

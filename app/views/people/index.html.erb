@@ -1,9 +1,15 @@
 <%- model_class = Person -%>
 <div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+  <h1><%=t '.title', :default => "EMCS部门点餐统计" %></h1>
 </div>
 
-<p>当前时间：<%= Time.now.to_formatted_s(:db) %></p>
+	<h3>请不要删除别人的订单，这样会导致别人没有饭吃的！</h3>
+	<h4>当前时间：<%= Time.now.to_formatted_s(:db) %></h4>
+	<BR />
+	<p style="color: red; font-size: 20px"> 点餐人数共<%= @count %>人。</p>
+	<BR />
+	<BR />
+	
 
 <table class="table table-striped">
   <thead>
@@ -21,11 +27,11 @@
         <td><%= person.description %></td>
         <td><%= person.updated_at.localtime.to_formatted_s(:time)  %></td>
         <td>
-          <%= link_to t('.show', :default => t("helpers.links.show")),
+          <%= link_to t('.show', :default => "详细"),
                       person_path(person), :class => 'btn btn-default btn-xs' %>
-          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+          <%= link_to t('.edit', :default => "编辑"),
                       edit_person_path(person), :class => 'btn btn-default btn-xs' %>
-          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+          <%= link_to t('.destroy', :default => "删除"),
                       person_path(person),
                       :method => :delete,
                       :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
@@ -41,4 +47,4 @@
             :class => 'btn btn-primary' %>
 
 
-<p style="color: red; font-size: 20px"> 点餐人数共<%= @count %>人。</p>
+
