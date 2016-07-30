@@ -1,0 +1,2 @@
+module AnysharesHelper
+end

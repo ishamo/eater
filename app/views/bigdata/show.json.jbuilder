@@ -1,0 +1,1 @@
+json.partial! "bigdata/bigdatum", bigdatum: @bigdatum

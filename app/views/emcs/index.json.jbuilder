@@ -1,0 +1,1 @@
+json.array! @emcs, partial: 'emcs/emc', as: :emc

@@ -1,0 +1,1 @@
+json.partial! "anyshares/anyshare", anyshare: @anyshare

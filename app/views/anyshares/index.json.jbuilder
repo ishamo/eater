@@ -1,0 +1,1 @@
+json.array! @anyshares, partial: 'anyshares/anyshare', as: :anyshare

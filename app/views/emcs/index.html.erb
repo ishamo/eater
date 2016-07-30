@@ -1,0 +1,47 @@
+<BR><BR>
+<div class="container">
+<%- model_class = Emc -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => "EMCS部门点餐" %></h1>
+</div>
+<BR>
+<h4>当前时间：<%= Time.now.to_formatted_s(:db) %></h4>
+<h4 style="color:red">有<%= @emcs_count %>人有点餐需求。</h4>
+<BR>
+<BR>
+<BR>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= "姓名" %></th>
+      <th><%= "需求" %></th>
+      <th><%= "时间" %></th>
+      <th><%= "操作" %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @emcs.each do |emc| %>
+      <tr>
+        <td><%= emc.name %></td>
+        <td><%= emc.description %></td>
+        <td><%= emc.updated_at.localtime.to_formatted_s(:time)  %></td>
+        <td>
+          <%= link_to t('.show', :default => "详细"),
+                      emc_path(emc), :class => 'btn btn-default btn-xs' %>
+          <%= link_to t('.edit', :default => "编辑"),
+                      edit_emc_path(emc), :class => 'btn btn-default btn-xs' %>
+          <%= link_to t('.destroy', :default => "删除"),
+                      emc_path(emc),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-xs btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_emc_path,
+            :class => 'btn btn-primary' %>
+</div>

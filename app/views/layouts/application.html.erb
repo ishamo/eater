@@ -9,9 +9,25 @@
   </head>
 
   <body>
-  <%= nav_bar :responsive => true, :fixed => :top, :brand => "Eisoo定餐" do %>
-	<%= menu_text "We make shiny things" %>
-  <% end %>
+    <nav class="navbar navbar-fixed-top navbar-default" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/">Eisoo点餐</a>
+        </div>
+        <div>
+          <ul class="nav navbar-nav">
+            <li><a href="/emcs">EMCS</a></li>
+          </ul>
+          <ul class="nav navbar-nav">
+            <li><a href="/bigdata">BIGDATA</a></li>
+          </ul>
+          <ul class="nav navbar-nav">
+            <li><a href="/anyshares">ANYSHARE</a></li>
+          </ul>
+        </div>
+      </div>
+
+	</nav>
   
 
     <%= yield %>

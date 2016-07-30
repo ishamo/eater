@@ -1,0 +1,1 @@
+json.array! @bigdata, partial: 'bigdata/bigdatum', as: :bigdatum

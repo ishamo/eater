@@ -1,1 +1,30 @@
-<h1>这个编码有问题吗？</h1>
+<div class="container">
+<BR>
+<BR>
+<h1>Eisoo部门点餐统计</h1>
+<BR>
+<h4>当前时间：</h4>
+<h4 style="color:red"><%= Time.now.to_formatted_s(:db) %></h4>
+
+<hr />
+<h4 style="color:red">注意：</h4>
+
+<p>从导航里面找到自己所在部门，然后录入自己的定餐信息即可 :)</p>
+
+<p>请不要恶意删除他人的定餐信息！！！</p>
+
+<hr />
+
+<table class="table table-striped">
+<thead>
+<tr>
+<th>部门</th><th>EMCS</th><th>BIGDATA</th><th>ANYSHARE</th>
+</tr>
+</thead>
+
+<tbody>
+<th>人数</th><td style="color:red"><%= @emcs_count %></td><td style="color:red"><%= @bigdata_count %></td><td style="color:red"><%= @anyshare_count %></td>
+</tbody>
+
+</table>
+</div>
