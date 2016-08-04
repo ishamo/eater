@@ -14,6 +14,7 @@ set :domain, 'ubuntu@192.168.60.176'
 set :deploy_to, '/var/www'
 set :repository, 'git@github.com:ishamo/eater.git'
 set :branch, 'master'
+set :term_mode, nil
 
 # For system-wide RVM install.
 #   set :rvm_path, '/usr/local/rvm/bin/rvm'
