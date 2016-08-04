@@ -16,6 +16,7 @@
   <thead>
     <tr>
       <th>姓名</th>
+	  <th>选择</th>
       <th>需求</th>
       <th>时间</th>
       <th>操作</th>
@@ -25,6 +26,7 @@
     <% @people.each do |person| %>
       <tr>
         <td><%= person.name %></td>
+		<td><%= person.choice %></td>
         <td><%= person.description %></td>
         <td><%= person.updated_at.localtime.to_formatted_s(:time)  %></td>
         <td>
