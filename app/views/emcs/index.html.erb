@@ -1,6 +1,6 @@
 <BR><BR>
 <div class="container">
-<%- model_class = Emc -%>
+
 <div class="page-header">
   <h1><%=t '.title', :default => "EMCS部门点餐" %></h1>
 </div>
@@ -13,17 +13,17 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th><%= "姓名" %></th>
-      <th><%= "需求" %></th>
-      <th><%= "时间" %></th>
-      <th><%= "操作" %></th>
+      <th>姓名</th>
+      <th>选择</th>
+      <th>时间</th>
+      <th>操作</th>
     </tr>
   </thead>
   <tbody>
     <% @emcs.each do |emc| %>
       <tr>
         <td><%= emc.name %></td>
-        <td><%= emc.description %></td>
+        <td><%= emc.choice %></td>
         <td><%= emc.updated_at.localtime.to_formatted_s(:time)  %></td>
         <td>
           <%= link_to t('.show', :default => "详细"),

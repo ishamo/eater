@@ -70,6 +70,6 @@ class BigdataController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def bigdatum_params
-      params.require(:bigdatum).permit(:name, :description)
+      params.require(:bigdatum).permit(:name, :choice)
     end
 end

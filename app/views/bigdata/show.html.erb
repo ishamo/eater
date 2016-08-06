@@ -1,14 +1,15 @@
+<BR><BR>
 <div class="container">
-<%- model_class = Bigdatum -%>
+
 <div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+  <h1>BigData</h1>
 </div>
 
 <dl class="dl-horizontal">
-  <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
+  <dt><strong>姓名:</strong></dt>
   <dd><%= @bigdatum.name %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:description) %>:</strong></dt>
-  <dd><%= @bigdatum.description %></dd>
+  <dt><strong>需求:</strong></dt>
+  <dd><%= @bigdatum.choice %></dd>
 </dl>
 
 <%= link_to t('.back', :default => t("helpers.links.back")),

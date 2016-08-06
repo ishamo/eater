@@ -70,6 +70,6 @@ class EmcsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def emc_params
-      params.require(:emc).permit(:name, :description)
+      params.require(:emc).permit(:name, :choice)
     end
 end

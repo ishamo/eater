@@ -16,19 +16,26 @@
   <% end %>
 
   <div class="form-group">
-    <%= f.label "*姓名", :class => 'control-label col-lg-2' %>
+    <%= f.label "姓名", :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
       <%= f.text_field :name, :class => 'form-control' %>
     </div>
-    <%=f.error_span(:name) %>
   </div>
+
   <div class="form-group">
     <%= f.label "需求", :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
-      <%= f.text_field :description, :class => 'form-control' %>
-    </div>
-    <%=f.error_span(:description) %>
+      <div class="btn-group" data-toggle="buttons">
+		<label class="btn btn-primary active">
+			<input type="radio" name="emc[choice]" value="大别山" checked> <b>大别山</b></input>
+		</label>
+		<label class="btn btn-primary"> 
+			<input type="radio" name="emc[choice]" value="蒸菜"> <b>蒸菜</b></input>
+		 </label>
+	  </div>
+	</div>
   </div>
+
 
   <div class="form-group">
     <div class="col-lg-offset-2 col-lg-10">
@@ -39,6 +46,6 @@
   </div>
 
 <HR />
-<p>*姓名字段必填，4~10字符。</p>
-<p>需求字段选填，100字符以内。</p>
+<p>*请写清楚姓名, 四字符以上<sm>(一个汉字算两个字符)</sm>。</p>
+
 <% end %>

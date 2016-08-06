@@ -1,3 +1,4 @@
+<BR><BR>
 <div class="container">
 <%- model_class = Anyshare -%>
 <div class="page-header">
@@ -5,10 +6,10 @@
 </div>
 
 <dl class="dl-horizontal">
-  <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
+  <dt><strong>姓名:</strong></dt>
   <dd><%= @anyshare.name %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:description) %>:</strong></dt>
-  <dd><%= @anyshare.description %></dd>
+  <dt><strong>选择:</strong></dt>
+  <dd><%= @anyshare.choice %></dd>
 </dl>
 
 <%= link_to t('.back', :default => t("helpers.links.back")),

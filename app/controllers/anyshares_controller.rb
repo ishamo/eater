@@ -70,6 +70,6 @@ class AnysharesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def anyshare_params
-      params.require(:anyshare).permit(:name, :description)
+      params.require(:anyshare).permit(:name, :choice)
     end
 end

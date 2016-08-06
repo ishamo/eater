@@ -23,7 +23,7 @@
     <% @bigdata.each do |bigdatum| %>
       <tr>
         <td><%= bigdatum.name %></td>
-        <td><%= bigdatum.description %></td>
+        <td><%= bigdatum.choice %></td>
         <td><%= bigdatum.updated_at.localtime.to_formatted_s(:time)  %></td>
         <td>
           <%= link_to t('.show', :default => "详细"),
