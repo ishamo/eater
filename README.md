@@ -1,3 +1,5 @@
+# 启动方法: 
+`RAILS_ENV=production rails s -b 192.168.61.60 -e production`
 # README
 
 This README would normally document whatever steps are necessary to get the

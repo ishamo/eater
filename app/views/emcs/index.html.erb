@@ -5,6 +5,8 @@
   <h1><%=t '.title', :default => "EMCS部门点餐" %></h1>
 </div>
 <BR>
+<h4 style="color:red">请尽量于16:50之前定餐!</h4>
+<BR>
 <h4>当前时间：<%= Time.now.to_formatted_s(:db) %></h4>
 <h4 style="color:red">有<%= @emcs_count %>人有点餐需求。</h4>
 <BR>

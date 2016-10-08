@@ -19,6 +19,6 @@
 
 # Learn more: http://github.com/javan/whenever
 
-every 1.days, :at => '6:00 pm' do
+every 1.days, :at => '7:00 pm' do
   rake "db:del"
 end
